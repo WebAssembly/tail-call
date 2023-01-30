@@ -2270,7 +2270,7 @@ S; F; (\href{../syntax/types.html#syntax-valtype}{\mathsf{i32}}.\href{../syntax/
 <div class="math notranslate nohighlight">
 \[\begin{array}{lcl&#64;{\qquad}l}
 (\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{return\_call}}~x) &amp;\href{../exec/conventions.html#formal-notation}{\hookrightarrow}&amp; (\href{../exec/runtime.html#syntax-return-invoke}{\mathsf{return\_invoke}}~a)
-  &amp; (\mathrel{\mbox{if}} \href{../syntax/instructions.html#syntax-instr-control}{\mathsf{call}}~x \href{../exec/conventions.html#formal-notation}{\hookrightarrow} \href{../exec/runtime.html#syntax-invoke}{\mathsf{invoke}}~a)
+  &amp; (\mathrel{\mbox{if}} (\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{call}}~x) \href{../exec/conventions.html#formal-notation}{\hookrightarrow} (\href{../exec/runtime.html#syntax-invoke}{\mathsf{invoke}}~a))
 \end{array}\]</div>
 </section>
 <section id="xref-syntax-instructions-syntax-instr-control-mathsf-return-call-indirect-x">
@@ -2308,10 +2308,10 @@ S; F; (\href{../syntax/types.html#syntax-valtype}{\mathsf{i32}}.\href{../syntax/
 </ol>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{lcl&#64;{\qquad}l}
-(\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{return\_call\_indirect}}~x) &amp;\href{../exec/conventions.html#formal-notation}{\hookrightarrow}&amp; (\href{../exec/runtime.html#syntax-return-invoke}{\mathsf{return\_invoke}}~a)
-  &amp; (\mathrel{\mbox{if}} \href{../syntax/instructions.html#syntax-instr-control}{\mathsf{call\_indirect}}~x \href{../exec/conventions.html#formal-notation}{\hookrightarrow} \href{../exec/runtime.html#syntax-invoke}{\mathsf{invoke}}~a) \\
-(\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{return\_call\_indirect}}~x) &amp;\href{../exec/conventions.html#formal-notation}{\hookrightarrow}&amp; \href{../exec/runtime.html#syntax-trap}{\mathsf{trap}}
-  &amp; (\mathrel{\mbox{if}} \href{../syntax/instructions.html#syntax-instr-control}{\mathsf{call\_indirect}}~x \href{../exec/conventions.html#formal-notation}{\hookrightarrow} \href{../exec/runtime.html#syntax-trap}{\mathsf{trap}}) \\
+\href{../exec/runtime.html#syntax-val}{\mathit{val}}~(\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{return\_call\_indirect}}~x) &amp;\href{../exec/conventions.html#formal-notation}{\hookrightarrow}&amp; (\href{../exec/runtime.html#syntax-return-invoke}{\mathsf{return\_invoke}}~a)
+  &amp; (\mathrel{\mbox{if}} \href{../exec/runtime.html#syntax-val}{\mathit{val}}~(\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{call\_indirect}}~x) \href{../exec/conventions.html#formal-notation}{\hookrightarrow} (\href{../exec/runtime.html#syntax-invoke}{\mathsf{invoke}}~a)) \\
+\href{../exec/runtime.html#syntax-val}{\mathit{val}}~(\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{return\_call\_indirect}}~x) &amp;\href{../exec/conventions.html#formal-notation}{\hookrightarrow}&amp; \href{../exec/runtime.html#syntax-trap}{\mathsf{trap}}
+  &amp; (\mathrel{\mbox{if}} \href{../exec/runtime.html#syntax-val}{\mathit{val}}~(\href{../syntax/instructions.html#syntax-instr-control}{\mathsf{call\_indirect}}~x) \href{../exec/conventions.html#formal-notation}{\hookrightarrow} \href{../exec/runtime.html#syntax-trap}{\mathsf{trap}}) \\
 \end{array}\end{split}\]</div>
 </section>
 </section>
