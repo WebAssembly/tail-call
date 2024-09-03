@@ -85,15 +85,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: mkdir _output && cp document/index.html _output/index.html
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: js-api-rendered
           path: _output/js-api
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: web-api-rendered
           path: _output/web-api
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: core-api-rendered
           path: _output/core
