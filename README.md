@@ -2,6 +2,8 @@
 
 # Tail Call Proposal for WebAssembly
 
+### **This repository has been merged upstream and is archived.**
+
 This repository is a clone of [github.com/WebAssembly/spec/](https://github.com/WebAssembly/spec/).
 It is meant for discussion, prototype specification and implementation of a proposal to add tail call support to WebAssembly.
 
